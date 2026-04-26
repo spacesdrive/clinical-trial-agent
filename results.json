@@ -1,0 +1,42 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "training_steps": 120,
+  "environment": "https://hydra007007-clinical-trial-agent.hf.space",
+  "baseline": {
+    "easy": {
+      "mean": 0.8566,
+      "std": 0.0444
+    },
+    "medium": {
+      "mean": 0.8854,
+      "std": 0.0611
+    },
+    "hard": {
+      "mean": 0.8703,
+      "std": 0.0587
+    }
+  },
+  "trained": {
+    "easy": {
+      "mean": 0.8768,
+      "std": 0.0565
+    },
+    "medium": {
+      "mean": 0.9306,
+      "std": 0.0589
+    },
+    "hard": {
+      "mean": 0.8726,
+      "std": 0.0477
+    }
+  },
+  "improvement": {
+    "easy": 0.0202,
+    "medium": 0.0452,
+    "hard": 0.0024
+  },
+  "reward_curve_points": 24,
+  "space_url": "https://huggingface.co/spaces/hydra007007/clinical-trial-agent",
+  "model_url": "https://huggingface.co/hydra007007/clinical-trial-agent-grpo",
+  "colab_url": "FILL_IN_AFTER_SHARING_NOTEBOOK"
+}
