@@ -40,9 +40,6 @@ logs/
 # HuggingFace cache
 .cache/
 
-# Plots (generated during training — add your own)
-plots/
-
 # Secrets — NEVER commit tokens
 *.token
 secrets.json
