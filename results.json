@@ -1,32 +1,85 @@
 {
   "model": "Qwen/Qwen2.5-1.5B-Instruct",
-  "steps": 360,
+  "steps_planned": 360,
+  "steps_logged": 20,
   "env": "https://hydra007007-clinical-trial-agent.hf.space",
   "baseline": {
     "easy": {
-      "mean": 0.2381
+      "mean": 0.2381,
+      "std": 0.1347
     },
     "medium": {
-      "mean": 0.2143
+      "mean": 0.2143,
+      "std": 0.1597
     },
     "hard": {
-      "mean": 0.2262
+      "mean": 0.2262,
+      "std": 0.1363
     }
   },
   "trained": {
     "easy": {
-      "mean": 1.0
+      "mean": 1.0,
+      "std": 0.0
     },
     "medium": {
-      "mean": 1.0
+      "mean": 1.0,
+      "std": 0.0
     },
     "hard": {
-      "mean": 1.0
+      "mean": 1.0,
+      "std": 0.0
     }
   },
   "improvement": {
     "easy": 0.7619,
     "medium": 0.7857,
     "hard": 0.7738
+  },
+  "training_log": {
+    "steps": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100
+    ],
+    "rewards": [
+      1.6,
+      1.85,
+      1.875,
+      2.9,
+      3.0,
+      4.125,
+      4.75,
+      5.3,
+      5.525,
+      6.35,
+      6.825,
+      6.6,
+      6.675,
+      7.0,
+      6.625,
+      6.925,
+      6.925,
+      6.825,
+      6.9,
+      6.95
+    ]
   }
 }
