@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "clinical-trial-agent"
+version = "1.0.0"
+description = "RL environment for clinical trial protocol design — OpenEnv Hackathon 2026"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.29.0",
+    "pydantic>=2.0.0",
+    "python-multipart>=0.0.9",
+    "websockets>=12.0",
+    "requests>=2.31.0",
+    "huggingface_hub>=0.21.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "httpx>=0.27.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["clinical_trial_agent*"]
+
+[project.urls]
+"Homepage" = "https://huggingface.co/spaces/hydra007007/clinical-trial-agent"
+"Repository" = "https://github.com/hydra007007/clinical-trial-agent"

@@ -1,0 +1,53 @@
+name: clinical-trial-agent
+version: "1.0.0"
+description: >
+  ClinicalTrialAgent is an RL environment where an LLM agent designs
+  regulatory-compliant clinical trial protocols for complex diseases.
+  The agent learns multi-turn decision making with a composable 4-rubric
+  reward signal grounded in FDA/ICH guidelines. First RL training
+  environment for clinical trial protocol design.
+author: "hydra007007"
+license: MIT
+openenv_version: ">=0.1.0"
+theme: "world-modeling-professional-tasks"
+tags:
+  - clinical-trials
+  - healthcare
+  - multi-turn
+  - long-horizon
+  - regulatory
+  - RL
+  - professional-tasks
+environment:
+  entry_point: "server.app:app"
+  port: 7860
+  api_type: "http+websocket"
+action_space:
+  type: structured
+  schema: TrialAction
+observation_space:
+  type: structured
+  schema: TrialObservation
+reward:
+  type: composable_rubric
+  components:
+    - name: completeness
+      weight: 0.30
+      description: "Fraction of 9 required protocol fields filled"
+    - name: regulatory_validity
+      weight: 0.35
+      description: "FDA/ICH rule compliance (Phase, sample size, power, design)"
+    - name: scientific_coherence
+      weight: 0.20
+      description: "Cross-field consistency score"
+    - name: efficiency_bonus
+      weight: 0.15
+      description: "Bonus for completing faster than max_steps"
+difficulty_levels:
+  - easy
+  - medium
+  - hard
+max_steps:
+  easy: 10
+  medium: 14
+  hard: 8
