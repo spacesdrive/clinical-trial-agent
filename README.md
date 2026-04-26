@@ -1,18 +1,3 @@
----
-title: ClinicalTrialAgent
-colorFrom: blue
-colorTo: green
-sdk: docker
-app_port: 7860
-tags:
-  - openenv
-  - rl-environment
-  - clinical-trials
-  - healthcare
-  - multi-turn
-  - grpo
----
-
 # ClinicalTrialAgent
 
 **The first RL training environment for teaching LLMs to design regulatory-compliant clinical trial protocols.**
